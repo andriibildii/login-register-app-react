@@ -1,6 +1,6 @@
 # Login-Register-Form with React
 
-![](./assets/img/preview.png)
+![Hero](./src/assets/img/preview.png "Hero")
 
 ### Getting Started with Create React App
 
