@@ -44,6 +44,10 @@ button {
   font-weight: bold;
 }
 
+button a {
+  color: white;
+}
+
 .link-btn {
   background: none;
   color: white;
