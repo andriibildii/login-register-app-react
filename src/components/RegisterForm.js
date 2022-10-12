@@ -23,12 +23,12 @@ export const RegisterForm = ({title, handleClick}) => {
 
     return (
         <form className="login-register-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Full name</label>
+            <label htmlFor="name">full name</label>
             <input 
                 type="text"
                 defaultValue={fullName} 
                 onChange={handleName} 
-                placeholder="full name" 
+                placeholder="John Doe" 
                 name="name" 
             />
             <label htmlFor="email">email</label>
