@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import {HomePage} from 'components/HomePage/HomePage';
-import { Login } from "./components/Login/Login";
-import { Register } from "./components/Register/Register";
+import {HomePage} from 'pages/HomePage/HomePage';
+import { LoginPage } from "./pages/Login/Login";
+import { RegisterPage } from "./pages/Register/Register";
 import './App.css';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Routes>
       <Route exact path='/' element={<HomePage/>} />
-      <Route exact path='/login' element={<Login/>} />
-      <Route exact path='/register' element={<Register/>} />
+      <Route exact path='/login' element={<LoginPage/>} />
+      <Route exact path='/register' element={<RegisterPage/>} />
 
     </Routes>
     </div>

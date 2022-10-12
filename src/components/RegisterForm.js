@@ -1,20 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-export const Register = () => {
+export const RegisterForm = ({title, handleClick}) => {
+    const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
-    const [name, setName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('name: ' + name + ', ' + 
-                    'email: ' + email + ', ' +
-                    'pass: ' + pass);
     }
 
     const handleName = (e) => {
-        setName(e.target.value);
+        setFullName(e.target.value);
     }
 
     const handleEmail = (e) => {
@@ -26,39 +22,37 @@ export const Register = () => {
     }
 
     return (
-        <div className="form-container">
-            <h2>Register</h2>
-        <form className="register-form" onSubmit={handleSubmit}>
+        <form className="login-register-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Full name</label>
             <input 
-                defaultValue={name} 
+                type="text"
+                defaultValue={fullName} 
                 onChange={handleName} 
+                placeholder="full name" 
                 name="name" 
-                id="name" 
-                placeholder="Full name" 
             />
             <label htmlFor="email">email</label>
             <input 
+                type="email"
                 defaultValue={email} 
                 onChange={handleEmail}
-                type="email" 
                 placeholder="email@gmail.com" 
-                id="email" 
                 name="email" 
             />
             <label htmlFor="password">password</label>
             <input 
-                defaultValue={pass} 
-                onChange={handlePass} 
                 type="password" 
-                placeholder="********" 
-                id="password" 
+                defaultValue={pass} 
+                onChange={handlePass}
+                placeholder="********"
                 name="password" 
-                autoComplete="on"
+                autoComplete="on"      
             />
-            <button type="submit">Log In</button>
+            <button
+                onClick={() => handleClick(fullName, email, pass)}
+            >
+                {title}
+            </button>
         </form>
-        <button className="link-btn"><Link to='/login'>Already have an account? Login here.</Link></button>
-    </div>
     )
 }
