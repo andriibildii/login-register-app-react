@@ -4,10 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { LoginForm } from 'components/LoginForm';
 import {setUser} from 'store/slices/userSlice';
 
-
-
 import { Link } from "react-router-dom";
-
 
 export const LoginPage = () => {
     const dispatch = useDispatch();
@@ -29,7 +26,6 @@ export const LoginPage = () => {
 
         } catch (error) {
 			alert('Invalid User! ' + error);
-
         }
     }
 
@@ -40,7 +36,6 @@ export const LoginPage = () => {
                 <LoginForm
                     title='Login'
                     handleClick={handlelogin}
-                
                 />
             </div>
             <button className="link-btn"> <Link to='/register'>Don't have an account? Register here.</Link></button>

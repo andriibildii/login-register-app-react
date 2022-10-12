@@ -3,13 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { RegisterForm } from "components/RegisterForm";
 import {setUser} from 'store/slices/userSlice';
-
 import { Link } from "react-router-dom";
 
 export const RegisterPage = () => {
-
     const dispatch = useDispatch();
-
     const navigate = useNavigate();
     
     const handleRegister = async (fullName, email, password) => {
@@ -32,8 +29,6 @@ export const RegisterPage = () => {
 			console.log(error);
         }
     }
-
-
 
     return (
         <div className="form-container">
