@@ -2,9 +2,15 @@
 
 ![Hero](./src/assets/img/preview.png "Hero")
 
+![Regeister Pag](./src/assets/img/registerpage.png "Regeister Pag")
+
+![Home Page](./src/assets/img/homepage.png "Home Page")
+
 ## Technologies
 - React
 - React-router-dom
+- Redux Toolkit
+- Firebase
 
 ## Getting Started with Create React App
 
